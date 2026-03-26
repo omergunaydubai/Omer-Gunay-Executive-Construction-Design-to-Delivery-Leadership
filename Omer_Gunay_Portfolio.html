@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omer Gunay — Executive Construction Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   VARIABLES & RESET
+   ═══════════════════════════════════════════ */
+:root {
+  --ink:        #0b1520;
+  --navy:       #0f2137;
+  --navy-mid:   #162d47;
+  --cream:      #f4f1ec;
+  --cream-dark: #ede8e0;
+  --gold:       #b8975a;
+  --gold-light: #d4b47a;
+  --gold-pale:  #e8d9b8;
+  --charcoal:   #2a2a2a;
+  --steel:      #2a3f54;
+  --mist:       #e8e4dc;
+  --accent:     #1a4a6b;
+  --white:      #ffffff;
+  --grey:       #5a5550;
+  --grey-light: #9aaab8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'DM Sans', 'Arial', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ═══════════════════════════════════════════
+   UTILITY CLASSES
+   ═══════════════════════════════════════════ */
+.serif { font-family: 'Cormorant Garamond', 'Georgia', serif; }
+.gold  { color: var(--gold); }
+.section-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
+}
+.section-pad { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+.section-pad-wide { padding: 80px 60px; max-width: 1400px; margin: 0 auto; }
+
+/* ═══════════════════════════════════════════
+   01. HERO
+   ═══════════════════════════════════════════ */
+.hero {
+  background: var(--ink);
+  color: var(--white);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 70% at 25% 50%, rgba(26,74,107,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 55% at 80% 20%, rgba(184,151,90,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold) 70%, transparent 100%);
+  opacity: 0.3;
+}
+
+.hero-left {
+  padding: 70px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.hero-eyebrow-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.hero-eyebrow-text {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--grey-light);
+  line-height: 1.5;
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.hero-tag {
+  padding: 6px 16px;
+  border: 1px solid rgba(184,151,90,0.35);
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(184,151,90,0.06);
+}
+.hero-tags-small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 36px;
+}
+.hero-tag-sm {
+  padding: 4px 12px;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: rgba(184,151,90,0.55);
+  border: 1px solid rgba(184,151,90,0.15);
+  border-radius: 2px;
+}
+.hero-contact {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.hero-contact a {
+  font-size: 12px;
+  color: var(--grey-light);
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-contact a:hover { color: var(--gold-light); }
+.hero-contact-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* Hero right — stats */
+.hero-right {
+  background: rgba(15,33,55,0.6);
+  border-left: 1px solid rgba(184,151,90,0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px 50px;
+  position: relative;
+  z-index: 1;
+}
+.hero-stat {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(184,151,90,0.1);
+}
+.hero-stat:last-child { border-bottom: none; }
+.hero-stat-value {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.hero-stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey-light);
+}
+
+/* ═══════════════════════════════════════════
+   02. MEGA-PROJECTS BANNER
+   ═══════════════════════════════════════════ */
+.mega {
+  background: var(--navy);
+  padding: 70px 60px;
+}
+.mega-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.mega-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.mega-sub {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--grey-light);
+}
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.mega-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(184,151,90,0.12);
+  border-radius: 4px;
+  padding: 30px 28px;
+  transition: border-color 0.3s, background 0.3s;
+}
+.mega-card:hover {
+  border-color: rgba(184,151,90,0.35);
+  background: rgba(255,255,255,0.05);
+}
+.mega-card-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+.mega-card-type {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.mega-card-detail {
+  font-size: 13px;
+  color: var(--grey-light);
+  line-height: 1.55;
+}
+
+/* ═══════════════════════════════════════════
+   03. EXECUTIVE SUMMARY
+   ═══════════════════════════════════════════ */
+.summary {
+  padding: 80px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.summary-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.summary-aside {
+  position: sticky;
+  top: 40px;
+}
+.summary-aside-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.summary-body {
+  max-width: 700px;
+}
+.summary-dropcap::first-letter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  float: left;
+  font-size: 68px;
+  line-height: 0.8;
+  padding-right: 12px;
+  padding-top: 6px;
+  color: var(--gold);
+  font-weight: 600;
+}
+.summary-text {
+  font-size: 15px;
+  color: var(--charcoal);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.summary-kpi-row {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.summary-kpi {
+  text-align: center;
+}
+.summary-kpi-val {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1;
+}
+.summary-kpi-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-top: 4px;
+}
+
+/* ═══════════════════════════════════════════
+   04. CAREER TIMELINE
+   ═══════════════════════════════════════════ */
+.timeline { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+.timeline-header { margin-bottom: 50px; }
+.timeline-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--mist);
+  position: relative;
+}
+.tl-item:last-child { border-bottom: none; }
+
+.tl-left {}
+.tl-dates {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.tl-company {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--grey);
+}
+.tl-location {
+  font-size: 11px;
+  color: var(--grey);
+  margin-top: 2px;
+}
+
+.tl-right {}
+.tl-role-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+.tl-project {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.tl-kpis {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.tl-kpi {
+  padding: 4px 14px;
+  background: rgba(26,74,107,0.06);
+  border: 1px solid rgba(26,74,107,0.12);
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+}
+.tl-bullets { list-style: none; }
+.tl-bullets li {
+  font-size: 14px;
+  color: var(--charcoal);
+  line-height: 1.7;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.tl-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* ═══════════════════════════════════════════
+   05. CORE COMPETENCIES
+   ═══════════════════════════════════════════ */
+.competencies {
+  background: var(--ink);
+  padding: 80px 60px;
+}
+.comp-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.comp-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--white);
+}
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.comp-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(184,151,90,0.12);
+  border-radius: 4px;
+  padding: 32px 28px;
+  transition: border-color 0.3s;
+}
+.comp-card:hover { border-color: rgba(184,151,90,0.3); }
+.comp-card-icon {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+.comp-card-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.comp-card-desc {
+  font-size: 13px;
+  color: var(--grey-light);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════
+   06. SIGNATURE ACHIEVEMENTS
+   ═══════════════════════════════════════════ */
+.achievements { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+.ach-header { margin-bottom: 50px; }
+.ach-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--ink);
+}
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.ach-card {
+  background: var(--white);
+  border: 1px solid var(--mist);
+  border-radius: 4px;
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.ach-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: var(--gold);
+}
+.ach-card-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: rgba(184,151,90,0.2);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.ach-card-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.ach-card-text {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.65;
+}
+
+/* ═══════════════════════════════════════════
+   07. PROJECT PORTFOLIO TABLE
+   ═══════════════════════════════════════════ */
+.portfolio-table-section {
+  background: var(--cream-dark);
+  padding: 80px 60px;
+}
+.pt-header { max-width: 1200px; margin: 0 auto 40px; }
+.pt-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--ink);
+}
+.pt-scroll {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.pt-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+.pt-table thead th {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 2px solid var(--gold);
+  white-space: nowrap;
+}
+.pt-table tbody td {
+  font-size: 13px;
+  color: var(--charcoal);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--mist);
+  vertical-align: top;
+}
+.pt-table tbody tr:hover { background: rgba(184,151,90,0.04); }
+.pt-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.pt-badge--hospitality { background: rgba(184,151,90,0.12); color: var(--gold); }
+.pt-badge--residential { background: rgba(26,74,107,0.1); color: var(--accent); }
+.pt-badge--commercial { background: rgba(42,63,84,0.1); color: var(--steel); }
+.pt-badge--healthcare { background: rgba(139,35,35,0.08); color: #8b2323; }
+.pt-badge--olympic { background: rgba(184,151,90,0.18); color: #8a6d2b; }
+.pt-badge--mixed { background: rgba(90,85,80,0.1); color: var(--grey); }
+
+/* ═══════════════════════════════════════════
+   08. DIRECTOR VALUE PROPOSITION
+   ═══════════════════════════════════════════ */
+.value-prop { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+.vp-header { margin-bottom: 50px; }
+.vp-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--ink);
+}
+.vp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.vp-track {
+  background: var(--white);
+  border: 1px solid var(--mist);
+  border-radius: 4px;
+  padding: 40px 36px;
+  position: relative;
+}
+.vp-track::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+}
+.vp-track-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.vp-track-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.vp-track-sub {
+  font-size: 12px;
+  color: var(--grey);
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+.vp-track-items { list-style: none; }
+.vp-track-items li {
+  font-size: 14px;
+  color: var(--charcoal);
+  padding: 8px 0;
+  padding-left: 18px;
+  position: relative;
+  border-bottom: 1px solid rgba(232,228,220,0.6);
+}
+.vp-track-items li:last-child { border-bottom: none; }
+.vp-track-items li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 16px;
+  width: 6px; height: 6px;
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+}
+
+/* ═══════════════════════════════════════════
+   09. EDUCATION & CREDENTIALS
+   ═══════════════════════════════════════════ */
+.education {
+  background: var(--cream-dark);
+  padding: 80px 60px;
+}
+.edu-inner { max-width: 1200px; margin: 0 auto; }
+.edu-header { margin-bottom: 50px; }
+.edu-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--ink);
+}
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.edu-card {
+  background: var(--white);
+  border: 1px solid var(--mist);
+  border-radius: 4px;
+  padding: 28px 24px;
+}
+.edu-card-icon {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.edu-card-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.edu-card-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.edu-card-sub {
+  font-size: 12px;
+  color: var(--grey);
+}
+.cred-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cred-pill {
+  padding: 6px 18px;
+  border: 1px solid var(--mist);
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  background: var(--white);
+}
+
+/* ═══════════════════════════════════════════
+   10. SECTOR HERITAGE
+   ═══════════════════════════════════════════ */
+.sectors {
+  background: var(--ink);
+  padding: 80px 60px;
+}
+.sector-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.sector-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--white);
+}
+.sector-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sector-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(184,151,90,0.12);
+  border-radius: 4px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+.sector-card:hover { border-color: rgba(184,151,90,0.35); }
+.sector-icon { font-size: 28px; display: block; margin-bottom: 12px; }
+.sector-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.sector-example {
+  font-size: 11px;
+  color: var(--grey-light);
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════
+   11. FOOTER
+   ═══════════════════════════════════════════ */
+footer {
+  background: var(--navy);
+  padding: 50px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.footer-tagline {
+  font-size: 12px;
+  color: var(--grey-light);
+  letter-spacing: 0.5px;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.footer-divider {
+  width: 50px; height: 1px;
+  background: var(--gold);
+  opacity: 0.3;
+  margin-bottom: 12px;
+}
+.footer-visa {
+  font-size: 10px;
+  color: rgba(154,170,184,0.5);
+  letter-spacing: 0.5px;
+}
+.footer-right { text-align: right; }
+.footer-contact {
+  font-size: 12px;
+  color: var(--grey-light);
+  line-height: 1.8;
+}
+.footer-contact a { color: var(--gold-light); transition: color 0.2s; }
+.footer-contact a:hover { color: var(--white); }
+.footer-copy {
+  font-size: 10px;
+  color: rgba(154,170,184,0.35);
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════════════════════════════════════
+   GLOBAL MOBILE SAFETY
+   ═══════════════════════════════════════════ */
+.hero-tags, .hero-tags-small, .hero-contact,
+.tl-kpis, .cred-row, .summary-kpi-row {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.pt-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.pt-table td, .pt-table th {
+  word-break: keep-all;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 900px (Tablet)
+   ═══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero-left { padding: 50px 32px 40px; }
+  .hero-name { font-size: 48px; }
+  .hero-right {
+    border-left: none;
+    border-top: 1px solid rgba(184,151,90,0.12);
+    padding: 40px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .hero-stat { padding: 20px 16px; }
+  .hero-stat-value { font-size: 34px; }
+
+  .mega { padding: 50px 32px; }
+  .mega-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .section-pad, .section-pad-wide { padding: 60px 32px; }
+  .summary { padding: 60px 32px; }
+  .summary-grid { grid-template-columns: 1fr; gap: 20px; }
+  .summary-aside { position: static; }
+
+  .timeline { padding: 60px 32px; }
+  .tl-item { grid-template-columns: 1fr; gap: 8px; }
+  .tl-left {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .competencies { padding: 60px 32px; }
+  .comp-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .achievements { padding: 60px 32px; }
+  .ach-grid { grid-template-columns: 1fr; }
+
+  .portfolio-table-section { padding: 60px 32px; }
+
+  .value-prop { padding: 60px 32px; }
+  .vp-grid { grid-template-columns: 1fr; }
+
+  .education { padding: 60px 32px; }
+  .edu-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .sectors { padding: 60px 32px; }
+  .sector-grid { grid-template-columns: repeat(3, 1fr); }
+
+  footer { padding: 40px 32px; }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 480px (Phone)
+   ═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero-left { padding: 36px 20px 28px; }
+  .hero-name { font-size: 34px; letter-spacing: -0.5px; }
+  .hero-title { font-size: 13px; line-height: 1.6; }
+  .hero-eyebrow-text { font-size: 9px; letter-spacing: 2.5px; }
+  .hero-right {
+    grid-template-columns: 1fr 1fr;
+    padding: 24px 20px;
+  }
+  .hero-stat { padding: 16px 12px; }
+  .hero-stat-value { font-size: 26px; }
+  .hero-stat-label { font-size: 9px; letter-spacing: 1px; }
+  .hero-tags { gap: 5px; }
+  .hero-tag {
+    font-size: 8px;
+    padding: 4px 8px;
+    letter-spacing: 1px;
+  }
+  .hero-tags-small { gap: 4px; }
+  .hero-tag-sm { font-size: 7.5px; padding: 3px 8px; }
+  .hero-contact {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hero-contact-dot { display: none; }
+
+  /* Mega Projects */
+  .mega { padding: 40px 20px; }
+  .mega-grid { grid-template-columns: 1fr; }
+  .mega-card { padding: 22px 18px; }
+  .mega-card-name { font-size: 19px; }
+  .mega-card-detail { font-size: 12px; }
+  .mega-title { font-size: 28px; }
+
+  /* Executive Summary */
+  .summary { padding: 50px 20px; }
+  .summary-dropcap::first-letter {
+    font-size: 48px;
+    padding-right: 8px;
+    padding-top: 4px;
+  }
+  .summary-text { font-size: 14px; }
+  .summary-aside-title { font-size: 24px; }
+  .summary-kpi-row { gap: 24px; }
+  .summary-kpi-val { font-size: 28px; }
+
+  /* Career Timeline */
+  .timeline { padding: 50px 20px; }
+  .timeline-title { font-size: 28px; }
+  .tl-role-title { font-size: 20px; }
+  .tl-project { font-size: 13px; }
+  .tl-kpis { gap: 8px; }
+  .tl-kpi { font-size: 10px; padding: 3px 10px; }
+  .tl-bullets li { font-size: 13px; line-height: 1.65; }
+
+  /* Competencies */
+  .competencies { padding: 50px 20px; }
+  .comp-grid { grid-template-columns: 1fr; }
+  .comp-title { font-size: 28px; }
+
+  /* Achievements */
+  .achievements { padding: 50px 20px; }
+  .ach-title { font-size: 28px; }
+  .ach-card { padding: 28px 24px; }
+  .ach-card-num { font-size: 36px; }
+  .ach-card-title { font-size: 19px; }
+  .ach-card-text { font-size: 13px; }
+
+  /* Portfolio Table */
+  .portfolio-table-section { padding: 50px 20px; }
+  .pt-title { font-size: 28px; }
+  .pt-table { min-width: 700px; }
+  .pt-table tbody td { font-size: 12px; padding: 10px 12px; }
+  .pt-table thead th { font-size: 9px; padding: 10px 12px; }
+
+  /* Value Proposition */
+  .value-prop { padding: 50px 20px; }
+  .vp-title { font-size: 28px; }
+  .vp-track { padding: 28px 22px; }
+  .vp-track-title { font-size: 22px; }
+
+  /* Education */
+  .education { padding: 50px 20px; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .edu-title { font-size: 28px; }
+
+  /* Sectors */
+  .sectors { padding: 50px 20px; }
+  .sector-grid { grid-template-columns: 1fr 1fr; }
+  .sector-title { font-size: 26px; }
+  .sector-card { padding: 20px 14px; }
+  .sector-name { font-size: 16px; }
+  .sector-example { font-size: 10px; }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 20px;
+    gap: 24px;
+  }
+  .footer-right { text-align: left; }
+  .footer-name { font-size: 24px; }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 320px (iPhone SE / Tiny)
+   ═══════════════════════════════════════════ */
+@media (max-width: 360px) {
+  .hero-left { padding: 28px 16px 24px; }
+  .hero-name { font-size: 28px; }
+  .hero-stat-value { font-size: 22px; }
+  .hero-right { padding: 20px 16px; }
+  .mega { padding: 32px 16px; }
+  .summary { padding: 40px 16px; }
+  .timeline { padding: 40px 16px; }
+  .competencies { padding: 40px 16px; }
+  .achievements { padding: 40px 16px; }
+  .portfolio-table-section { padding: 40px 16px; }
+  .value-prop { padding: 40px 16px; }
+  .education { padding: 40px 16px; }
+  .sectors { padding: 40px 16px; }
+  .sector-grid { grid-template-columns: 1fr; }
+  footer { padding: 28px 16px; }
+  .summary-dropcap::first-letter {
+    font-size: 40px;
+    padding-right: 6px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   PRINT STYLES
+   ═══════════════════════════════════════════ */
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .hero { min-height: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     01. HERO
+     ══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-line"></span>
+      <span class="hero-eyebrow-text">Executive Construction & Design-to-Delivery Leadership</span>
+    </div>
+
+    <h1 class="hero-name serif">Omer Gunay</h1>
+
+    <p class="hero-title">
+      Senior Construction &amp; Design Leader with 20+ years of international experience delivering high-value luxury hospitality, mixed-use, office, and healthcare developments. Expert in developer-aligned delivery, cost control, lean construction, and cross-functional leadership from design through commissioning.
+    </p>
+
+    <div class="hero-tags">
+      <span class="hero-tag">Developer-Side Construction Leadership</span>
+      <span class="hero-tag">High-Rise Residential &amp; Fit-Out</span>
+      <span class="hero-tag">Cost Control &amp; Budget Performance</span>
+      <span class="hero-tag">Dubai-Based</span>
+      <span class="hero-tag" style="border-color:rgba(184,151,90,0.6);color:var(--gold);">UAE Work Visa</span>
+    </div>
+
+    <div class="hero-tags-small">
+      <span class="hero-tag-sm">Luxury Hospitality</span>
+      <span class="hero-tag-sm">Healthcare LEED</span>
+      <span class="hero-tag-sm">High-Rise Residential</span>
+      <span class="hero-tag-sm">Premium Commercial</span>
+      <span class="hero-tag-sm">Olympic Infrastructure</span>
+      <span class="hero-tag-sm">Mixed-Use Development</span>
+    </div>
+
+    <div class="hero-contact">
+      <a href="mailto:omergunay2002@yahoo.com">omergunay2002@yahoo.com</a>
+      <span class="hero-contact-dot"></span>
+      <a href="tel:+971522791453">+971 52 279 1453</a>
+      <span class="hero-contact-dot"></span>
+      <a href="https://www.linkedin.com/in/omer-gunay-a692b1a3/" target="_blank">LinkedIn</a>
+      <span class="hero-contact-dot"></span>
+      <span style="font-size:12px;color:var(--grey-light);">Dubai Hills Estate, UAE</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-stat">
+      <div class="hero-stat-value serif">20+</div>
+      <div class="hero-stat-label">Years International Experience</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value serif">203,000 m²</div>
+      <div class="hero-stat-label">Largest Single Project (Sochi 2014)</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value serif">330+</div>
+      <div class="hero-stat-label">Maximum Personnel Led</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value serif">&lt;3%</div>
+      <div class="hero-stat-label">Budget Variance YTD</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     02. MEGA-PROJECTS BANNER
+     ══════════════════════════════════════════ -->
+<section class="mega">
+  <div class="mega-header">
+    <span class="section-label" style="color:var(--gold);">Landmark Delivery</span>
+    <h2 class="mega-title serif">Signature Projects</h2>
+    <p class="mega-sub">High-value developments delivered across four countries</p>
+  </div>
+
+  <div class="mega-grid">
+    <div class="mega-card">
+      <div class="mega-card-type">Current — Kenya</div>
+      <div class="mega-card-name serif">88 Nairobi</div>
+      <div class="mega-card-detail">East Africa's tallest residential tower. Developer-side construction leadership from foundations through handover.</div>
+    </div>
+    <div class="mega-card">
+      <div class="mega-card-type">Russia — 108,000 m²</div>
+      <div class="mega-card-name serif">AFI SILVER</div>
+      <div class="mega-card-detail">52-floor luxury residential towers. 110+ workforce. Zero major non-conformances. BIM &amp; prefabrication delivery.</div>
+    </div>
+    <div class="mega-card">
+      <div class="mega-card-type">Russia — 93,000 m²</div>
+      <div class="mega-card-name serif">W-AFI</div>
+      <div class="mega-card-detail">Premium office tower. Fast-tracked delivery with 80+ staff across design, procurement and execution.</div>
+    </div>
+    <div class="mega-card">
+      <div class="mega-card-type">Russia — 379 Keys</div>
+      <div class="mega-card-name serif">Radisson Blu Olympiyskiy</div>
+      <div class="mega-card-detail">5-star hotel interiors to global brand standards. Lean construction room turnover. Operator commissioning.</div>
+    </div>
+    <div class="mega-card">
+      <div class="mega-card-type">Saudi Arabia — LEED</div>
+      <div class="mega-card-name serif">King Salman Hospital</div>
+      <div class="mega-card-detail">350-bed LEED-certified healthcare facility. 230+ personnel. MEP, medical equipment &amp; infection control compliance.</div>
+    </div>
+    <div class="mega-card">
+      <div class="mega-card-type">Russia — 203,000 m²</div>
+      <div class="mega-card-name serif">Sochi 2014 Olympics</div>
+      <div class="mega-card-detail">Olympic Infrastructure &amp; Amusement Park Zone. 330+ personnel. Delivered ahead of schedule for globally televised mega-event.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     03. EXECUTIVE SUMMARY
+     ══════════════════════════════════════════ -->
+<section class="summary">
+  <span class="section-label">Profile</span>
+  <div class="summary-grid">
+    <div class="summary-aside">
+      <div class="summary-aside-title serif">Executive<br>Summary</div>
+    </div>
+    <div class="summary-body">
+      <p class="summary-text summary-dropcap">
+        Design-to-delivery construction leader with over two decades of international experience spanning Africa, Russia, Saudi Arabia, and Turkey. Trained as an Interior Architect and forged on site — bringing rare end-to-end capability from design coordination through commissioning across high-rise residential towers, luxury hospitality interiors, LEED-certified healthcare facilities, and Olympic-scale infrastructure. Known for developer-aligned execution, measurable cost discipline, and clean, programme-compliant handovers.
+      </p>
+      <p class="summary-text">
+        Currently leading East Africa's tallest residential tower (88 Nairobi) on behalf of the developer, coordinating multi-disciplinary teams across structure, MEP and finishes while maintaining budget variance below 3%. Career portfolio spans 203,000 m² mega-event zones to 5-star brand standard fit-outs, with team sizes reaching 330+ across complex vertical builds. The ability to read design intent and protect it through construction reality — bridging consultants, contractors, and operators — is the through-line across every project.
+      </p>
+      <p class="summary-text">
+        UAE resident with a valid Dubai visa, currently completing a landmark assignment in East Africa. Selectively exploring Director and senior construction leadership opportunities in Dubai and the wider GCC for an immediate transition upon project completion.
+      </p>
+
+      <div class="summary-kpi-row">
+        <div class="summary-kpi">
+          <div class="summary-kpi-val serif">4</div>
+          <div class="summary-kpi-label">Countries</div>
+        </div>
+        <div class="summary-kpi">
+          <div class="summary-kpi-val serif">9</div>
+          <div class="summary-kpi-label">Major Projects</div>
+        </div>
+        <div class="summary-kpi">
+          <div class="summary-kpi-val serif">6</div>
+          <div class="summary-kpi-label">Sectors</div>
+        </div>
+        <div class="summary-kpi">
+          <div class="summary-kpi-val serif">330+</div>
+          <div class="summary-kpi-label">Peak Team Size</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     04. CAREER TIMELINE
+     ══════════════════════════════════════════ -->
+<section class="timeline">
+  <div class="timeline-header">
+    <span class="section-label">Career Progression</span>
+    <h2 class="timeline-title serif">Professional Timeline</h2>
+  </div>
+
+  <!-- Role 1 -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">Jul 2023 – Present</div>
+      <div class="tl-company">Lordship Africa</div>
+      <div class="tl-location">Nairobi, Kenya</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Senior Construction Project Manager</div>
+      <div class="tl-project">88 Nairobi — East Africa's Tallest Residential Tower</div>
+      <div class="tl-kpis">
+        <span class="tl-kpi">&lt;3% Budget Variance</span>
+        <span class="tl-kpi">Developer-Side</span>
+        <span class="tl-kpi">Lean &amp; Agile</span>
+      </div>
+      <ul class="tl-bullets">
+        <li>Leading full execution from foundations through handover, ensuring structural precision and design integrity</li>
+        <li>Coordinating multi-disciplinary teams across structure, MEP and finishes for milestone alignment</li>
+        <li>Implementing lean and agile construction methodologies to streamline workflow and improve site efficiency</li>
+        <li>Managing budget forecasting and cost control — delivering variance less than 3% YTD</li>
+        <li>Leading monthly progress, risk reporting and schedule recovery planning for developer/operator/investor stakeholders</li>
+        <li>Overseeing procurement and subcontractor selection to sustain accelerated timelines</li>
+        <li>Enforcing HSE, QA/QC and regulatory compliance with proactive inspection control</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Role 2 -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">Oct 2022 – Jul 2023</div>
+      <div class="tl-company">Ant Yapı</div>
+      <div class="tl-location">Moscow, Russia</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Construction Leader — Luxury Fit-Out</div>
+      <div class="tl-project">AFI SILVER — 52-Floor, 108,000 m² Luxury Residential Towers</div>
+      <div class="tl-kpis">
+        <span class="tl-kpi">110+ Workforce</span>
+        <span class="tl-kpi">Zero Non-Conformances</span>
+        <span class="tl-kpi">BIM &amp; Prefab</span>
+      </div>
+      <ul class="tl-bullets">
+        <li>Directed site delivery with precise discipline coordination across luxury residential towers</li>
+        <li>Supervised 110+ workforce including trade contractors and consultants</li>
+        <li>Developed detailed construction sequencing to mitigate bottlenecks and avoid delay-driven disruptions</li>
+        <li>Maintained 100% adherence to specifications with zero major non-conformances</li>
+        <li>Leveraged BIM coordination and prefabrication to raise installation efficiency and accuracy</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Role 3 -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">Aug 2020 – Oct 2022</div>
+      <div class="tl-company">Ant Yapı</div>
+      <div class="tl-location">Moscow, Russia</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Construction Leader — Premium Fit-Out</div>
+      <div class="tl-project">W-AFI — 93,000 m² Premium Office Tower</div>
+      <div class="tl-kpis">
+        <span class="tl-kpi">80+ Staff</span>
+        <span class="tl-kpi">Fast-Track Delivery</span>
+      </div>
+      <ul class="tl-bullets">
+        <li>Oversaw construction ensuring global workplace standards and handover compliance</li>
+        <li>Enabled seamless collaboration between design, procurement and execution teams for fast-tracked delivery</li>
+        <li>Led 80+ staff and subcontractors, monitoring daily productivity and quality checkpoints</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Role 4 -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">Apr 2019 – Jan 2020</div>
+      <div class="tl-company">Synergy Construction Group</div>
+      <div class="tl-location">Moscow, Russia</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Construction Leader — LEED-Aligned Fit-Out</div>
+      <div class="tl-project">Neva Towers — 65,000 m² High-End Residential</div>
+      <div class="tl-kpis">
+        <span class="tl-kpi">50+ Personnel</span>
+        <span class="tl-kpi">LEED-Aligned</span>
+        <span class="tl-kpi">Value Engineering</span>
+      </div>
+      <ul class="tl-bullets">
+        <li>Managed luxury fit-out achieving LEED-aligned delivery standards</li>
+        <li>Led 50+ personnel across design interfacing, procurement flow and high-end interior execution</li>
+        <li>Strengthened coordination with developer/operator stakeholders to safeguard design intent</li>
+        <li>Drove value-engineering and schedule reviews enhancing costs and completion accuracy</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Role 5 -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">Mar 2018 – Mar 2019</div>
+      <div class="tl-company">Procons Construction</div>
+      <div class="tl-location">Moscow, Russia</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Construction Leader — 5-Star Hospitality Fit-Out</div>
+      <div class="tl-project">Radisson Blu Olympiyskiy — 379-Key 5-Star Hotel</div>
+      <div class="tl-kpis">
+        <span class="tl-kpi">379 Keys</span>
+        <span class="tl-kpi">Global Brand Standards</span>
+        <span class="tl-kpi">Lean Construction</span>
+      </div>
+      <ul class="tl-bullets">
+        <li>Delivered 379-key 5-star Radisson Blu Hotel interiors within a multifunctional complex to global hospitality standards</li>
+        <li>Coordinated logistics and interfacing trades under tight execution timelines for seamless guest-floor readiness</li>
+        <li>Applied lean construction to accelerate room turnover and optimise labour utilisation</li>
+        <li>Engaged operators and developers ensuring brand consistency through commissioning</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Role 6 -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">Mar 2015 – Jan 2018</div>
+      <div class="tl-company">Yenigün İnşaat A.Ş.</div>
+      <div class="tl-location">Saudi Arabia</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Construction Leader — Healthcare Fit-Out</div>
+      <div class="tl-project">King Salman Specialized Hospital — 350-Bed LEED-Certified</div>
+      <div class="tl-kpis">
+        <span class="tl-kpi">230+ Personnel</span>
+        <span class="tl-kpi">LEED-Certified</span>
+        <span class="tl-kpi">Near-100% Inspection</span>
+      </div>
+      <ul class="tl-bullets">
+        <li>Directed interior construction of LEED-certified healthcare facility</li>
+        <li>Ensured compliance across MEP, medical equipment and infection control requirements</li>
+        <li>Built detailed tracking dashboards securing early milestone completion and smooth commissioning</li>
+        <li>Guided 230+ personnel and subcontractors ensuring near-100% inspection readiness</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Role 7 -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">Jul 2014 – Mar 2015</div>
+      <div class="tl-company">Megaron Construction</div>
+      <div class="tl-location">Moscow, Russia</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Construction Leader — Corporate Fit-Out</div>
+      <div class="tl-project">Qatar Airways &amp; Turkish Airlines Office Fit-Outs</div>
+      <div class="tl-kpis">
+        <span class="tl-kpi">Zero Defects at Handover</span>
+        <span class="tl-kpi">Aviation Brand Standards</span>
+      </div>
+      <ul class="tl-bullets">
+        <li>Delivered high-end office fit-outs for global aviation brands in Moscow</li>
+        <li>Maintained tight stakeholder alignment achieving zero major defects at handover</li>
+        <li>Controlled budget performance and reporting enabling efficient final delivery</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Role 8 -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">Dec 2012 – Jan 2014</div>
+      <div class="tl-company">Yenigün İnşaat A.Ş.</div>
+      <div class="tl-location">Sochi, Russia</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Construction Leader — Olympic Infrastructure</div>
+      <div class="tl-project">Sochi 2014 Winter Olympics — 203,000 m² Amusement Park Zone</div>
+      <div class="tl-kpis">
+        <span class="tl-kpi">330+ Personnel</span>
+        <span class="tl-kpi">203,000 m²</span>
+        <span class="tl-kpi">Ahead of Schedule</span>
+      </div>
+      <ul class="tl-bullets">
+        <li>Led end-to-end fit-out and exterior works for Sochi 2014 Olympic zone, managing 330+ personnel across MEP, architectural, QC and logistics teams</li>
+        <li>Drove fast-track execution: daily work plans, QA/QC, HSE compliance under international Olympic infrastructure requirements</li>
+        <li>Delivered project ahead of schedule for globally televised mega-event</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Role 9 -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">Dec 2010 – Dec 2012</div>
+      <div class="tl-company">Yenigün İnşaat A.Ş.</div>
+      <div class="tl-location">Sochi, Russia</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Construction Leader — Ultra-Luxury Hospitality</div>
+      <div class="tl-project">Kempinski Gelendzhik Resort — Ultra-Luxury Fit-Out</div>
+      <div class="tl-kpis">
+        <span class="tl-kpi">Kempinski Brand</span>
+        <span class="tl-kpi">Fast-Track</span>
+      </div>
+      <ul class="tl-bullets">
+        <li>Managed high-end interior fit-outs across rooms, spa, F&amp;B, congress areas and public spaces</li>
+        <li>Coordinated multidisciplinary teams under fast-track delivery milestones and strict international hospitality standards</li>
+        <li>Ensured readiness for commissioning within Olympic timelines</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Earlier Career -->
+  <div class="tl-item">
+    <div class="tl-left">
+      <div class="tl-dates">1996 – 2010</div>
+      <div class="tl-company">Various Firms</div>
+      <div class="tl-location">Turkey &amp; Russia</div>
+    </div>
+    <div class="tl-right">
+      <div class="tl-role-title serif">Earlier Career</div>
+      <div class="tl-project">Design Architecture &amp; Construction Foundations</div>
+      <ul class="tl-bullets">
+        <li><strong>Design Architect</strong> — Dsgnon Architecture &amp; Design, Gelendzhik (2008–2010): Developed architectural and interior design concepts for Kempinski brand</li>
+        <li><strong>Site Engineer</strong> — DererOmay Design &amp; Construction, Ankara (2006–2007): Site coordination and technical detailing for boutique projects</li>
+        <li><strong>Company Partner</strong> — Gunay Construction &amp; Furniture (1996–2004): Entrepreneurial background in construction and furniture business</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     05. CORE COMPETENCIES
+     ══════════════════════════════════════════ -->
+<section class="competencies">
+  <div class="comp-header">
+    <span class="section-label">Capabilities</span>
+    <h2 class="comp-title serif">Core Competencies</h2>
+  </div>
+
+  <div class="comp-grid">
+    <div class="comp-card">
+      <div class="comp-card-icon">📐</div>
+      <div class="comp-card-name serif">Developer-Side Construction Leadership</div>
+      <div class="comp-card-desc">Full project lifecycle oversight from foundations through handover, aligning contractor delivery with developer vision and commercial objectives.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-card-icon">🏗️</div>
+      <div class="comp-card-name serif">High-Rise &amp; Mega-Scale Execution</div>
+      <div class="comp-card-desc">Proven delivery of projects from 65,000 m² to 203,000 m² across complex vertical builds with teams exceeding 330 personnel.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-card-icon">💰</div>
+      <div class="comp-card-name serif">Cost Control &amp; Budget Performance</div>
+      <div class="comp-card-desc">Budget forecasting, variance management, value engineering and procurement optimisation delivering sub-3% variance on high-value assets.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-card-icon">✅</div>
+      <div class="comp-card-name serif">QA/QC &amp; Compliance Excellence</div>
+      <div class="comp-card-desc">Clean NCR records, proactive inspection regimes, LEED-certified delivery, and international compliance across hospitality, healthcare and Olympic standards.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-card-icon">🔄</div>
+      <div class="comp-card-name serif">Lean Construction &amp; Agile Methods</div>
+      <div class="comp-card-desc">Implementing lean workflows, construction sequencing, BIM coordination and prefabrication to accelerate delivery and reduce waste.</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-card-icon">🤝</div>
+      <div class="comp-card-name serif">Stakeholder &amp; Cross-Discipline Coordination</div>
+      <div class="comp-card-desc">Bridging developers, operators, investors, consultants and trade contractors with clear reporting, risk management and schedule recovery planning.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     06. SIGNATURE ACHIEVEMENTS
+     ══════════════════════════════════════════ -->
+<section class="achievements">
+  <div class="ach-header">
+    <span class="section-label">Impact</span>
+    <h2 class="ach-title serif">Signature Achievements</h2>
+  </div>
+
+  <div class="ach-grid">
+    <div class="ach-card">
+      <div class="ach-card-num serif">01</div>
+      <div class="ach-card-title serif">Olympic Mega-Event Delivery</div>
+      <div class="ach-card-text">Led the 203,000 m² Sochi 2014 Winter Olympic Amusement Park Zone with 330+ personnel, delivering ahead of schedule for a globally televised event under strict international compliance requirements.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-card-num serif">02</div>
+      <div class="ach-card-title serif">East Africa's Tallest Tower</div>
+      <div class="ach-card-text">Currently leading 88 Nairobi — East Africa's tallest residential tower — in a developer-side construction leadership role, maintaining budget variance below 3% YTD with multi-disciplinary team coordination.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-card-num serif">03</div>
+      <div class="ach-card-title serif">5-Star Brand Standard Delivery</div>
+      <div class="ach-card-text">Delivered premium fit-outs for Radisson Blu (379-key) and Kempinski ultra-luxury resort, meeting global hospitality brand standards through operator engagement and commissioning compliance.</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-card-num serif">04</div>
+      <div class="ach-card-title serif">LEED-Certified Healthcare Facility</div>
+      <div class="ach-card-text">Directed interior construction of King Salman Specialized Hospital — a 350-bed LEED-certified healthcare facility — guiding 230+ personnel to near-100% inspection readiness with MEP and infection control compliance.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     07. PROJECT PORTFOLIO TABLE
+     ══════════════════════════════════════════ -->
+<section class="portfolio-table-section">
+  <div class="pt-header">
+    <span class="section-label">Full Record</span>
+    <h2 class="pt-title serif">Project Portfolio</h2>
+  </div>
+
+  <div class="pt-scroll">
+    <table class="pt-table">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Sector</th>
+          <th>Scale</th>
+          <th>Location</th>
+          <th>Period</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>88 Nairobi</strong></td>
+          <td><span class="pt-badge pt-badge--residential">Residential</span></td>
+          <td>East Africa's tallest tower</td>
+          <td>Nairobi, Kenya</td>
+          <td>2023–Present</td>
+          <td>&lt;3% variance, developer-side leadership</td>
+        </tr>
+        <tr>
+          <td><strong>AFI SILVER</strong></td>
+          <td><span class="pt-badge pt-badge--residential">Residential</span></td>
+          <td>52-floor, 108,000 m²</td>
+          <td>Moscow, Russia</td>
+          <td>2022–2023</td>
+          <td>Zero non-conformances, BIM delivery</td>
+        </tr>
+        <tr>
+          <td><strong>W-AFI</strong></td>
+          <td><span class="pt-badge pt-badge--commercial">Commercial</span></td>
+          <td>93,000 m²</td>
+          <td>Moscow, Russia</td>
+          <td>2020–2022</td>
+          <td>Fast-tracked, global workplace standards</td>
+        </tr>
+        <tr>
+          <td><strong>Neva Towers</strong></td>
+          <td><span class="pt-badge pt-badge--residential">Residential</span></td>
+          <td>65,000 m²</td>
+          <td>Moscow, Russia</td>
+          <td>2019–2020</td>
+          <td>LEED-aligned, value engineered</td>
+        </tr>
+        <tr>
+          <td><strong>Radisson Blu Olympiyskiy</strong></td>
+          <td><span class="pt-badge pt-badge--hospitality">Hospitality</span></td>
+          <td>379-key, 5-star</td>
+          <td>Moscow, Russia</td>
+          <td>2018–2019</td>
+          <td>Global brand standard compliance</td>
+        </tr>
+        <tr>
+          <td><strong>King Salman Hospital</strong></td>
+          <td><span class="pt-badge pt-badge--healthcare">Healthcare</span></td>
+          <td>350-bed, LEED-certified</td>
+          <td>Saudi Arabia</td>
+          <td>2015–2018</td>
+          <td>Near-100% inspection, early milestones</td>
+        </tr>
+        <tr>
+          <td><strong>Qatar Airways &amp; Turkish Airlines</strong></td>
+          <td><span class="pt-badge pt-badge--commercial">Commercial</span></td>
+          <td>Corporate offices</td>
+          <td>Moscow, Russia</td>
+          <td>2014–2015</td>
+          <td>Zero defects at handover</td>
+        </tr>
+        <tr>
+          <td><strong>Sochi 2014 Olympics</strong></td>
+          <td><span class="pt-badge pt-badge--olympic">Olympic</span></td>
+          <td>203,000 m², 330+ team</td>
+          <td>Sochi, Russia</td>
+          <td>2012–2014</td>
+          <td>Ahead of schedule, int'l compliance</td>
+        </tr>
+        <tr>
+          <td><strong>Kempinski Gelendzhik</strong></td>
+          <td><span class="pt-badge pt-badge--hospitality">Hospitality</span></td>
+          <td>Ultra-luxury resort</td>
+          <td>Sochi, Russia</td>
+          <td>2010–2012</td>
+          <td>Kempinski brand, Olympic readiness</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     08. DIRECTOR VALUE PROPOSITION
+     ══════════════════════════════════════════ -->
+<section class="value-prop">
+  <div class="vp-header">
+    <span class="section-label">Strategic Fit</span>
+    <h2 class="vp-title serif">Director / C-Suite Value Proposition</h2>
+  </div>
+
+  <div class="vp-grid">
+    <div class="vp-track">
+      <div class="vp-track-num">Track 1</div>
+      <div class="vp-track-title serif">Construction &amp; Project Delivery</div>
+      <div class="vp-track-sub">Developer-Side Oversight · High-Rise Execution · QA/QC Excellence</div>
+      <ul class="vp-track-items">
+        <li>Developer-side construction leadership on landmark tower (88 Nairobi)</li>
+        <li>Mega-scale delivery: 203,000 m² Olympic zone, 108,000 m² luxury towers</li>
+        <li>Clean NCR records and programme-compliant handovers across all projects</li>
+        <li>BIM coordination and prefabrication implementation at high-rise scale</li>
+        <li>Multi-sector compliance: hospitality, healthcare LEED, Olympic standards</li>
+        <li>China FF&amp;E procurement and QA/QC factory inspection experience</li>
+      </ul>
+    </div>
+    <div class="vp-track">
+      <div class="vp-track-num">Track 2</div>
+      <div class="vp-track-title serif">Commercial &amp; Operations Leadership</div>
+      <div class="vp-track-sub">Budget Control · Procurement · Stakeholder Management · Risk Mitigation</div>
+      <ul class="vp-track-items">
+        <li>Budget variance below 3% YTD on high-value residential asset</li>
+        <li>Value engineering and schedule recovery planning across complex portfolios</li>
+        <li>Procurement and subcontractor management for accelerated timelines</li>
+        <li>Developer/operator/investor reporting and stakeholder alignment</li>
+        <li>Lean construction and agile execution methodology deployment</li>
+        <li>Team leadership at scale: 330+ personnel across multi-disciplinary teams</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     09. EDUCATION & CREDENTIALS
+     ══════════════════════════════════════════ -->
+<section class="education">
+  <div class="edu-inner">
+    <div class="edu-header">
+      <span class="section-label">Foundation</span>
+      <h2 class="edu-title serif">Education &amp; Credentials</h2>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-card-icon">🎓</div>
+        <div class="edu-card-label">Degree</div>
+        <div class="edu-card-title serif">Interior Architecture &amp; Environmental Design</div>
+        <div class="edu-card-sub">Bilkent University, Ankara</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-card-icon">🌿</div>
+        <div class="edu-card-label">Sustainability</div>
+        <div class="edu-card-title serif">LEED-Certified Project Delivery</div>
+        <div class="edu-card-sub">King Salman Hospital &amp; Neva Towers</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-card-icon">📊</div>
+        <div class="edu-card-label">Technology</div>
+        <div class="edu-card-title serif">BIM Coordination &amp; Prefabrication</div>
+        <div class="edu-card-sub">Implemented at high-rise scale</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-card-icon">⚡</div>
+        <div class="edu-card-label">Methodology</div>
+        <div class="edu-card-title serif">Lean Construction &amp; Agile Execution</div>
+        <div class="edu-card-sub">Applied across all major projects</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-card-icon">🏨</div>
+        <div class="edu-card-label">Brand Experience</div>
+        <div class="edu-card-title serif">5-Star Hospitality Brand Fit-Out</div>
+        <div class="edu-card-sub">Radisson Blu · Kempinski</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-card-icon">🌐</div>
+        <div class="edu-card-label">Languages</div>
+        <div class="edu-card-title serif">English &amp; Turkish</div>
+        <div class="edu-card-sub">Full Professional &amp; Native</div>
+      </div>
+    </div>
+
+    <div class="cred-row">
+      <span class="cred-pill">AutoCAD</span>
+      <span class="cred-pill">Microsoft Office Suite</span>
+      <span class="cred-pill">Lean Construction</span>
+      <span class="cred-pill">Agile Execution Models</span>
+      <span class="cred-pill">BIM Coordination</span>
+      <span class="cred-pill">Prefabrication</span>
+      <span class="cred-pill">HSE &amp; QA/QC Compliance</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     10. SECTOR HERITAGE
+     ══════════════════════════════════════════ -->
+<section class="sectors">
+  <div class="sector-header">
+    <span class="section-label" style="color:var(--gold);">Sector Breadth</span>
+    <h2 class="sector-title serif">Six Sectors. One Standard of Excellence.</h2>
+  </div>
+
+  <div class="sector-grid">
+    <div class="sector-card">
+      <span class="sector-icon">🏨</span>
+      <div class="sector-name serif">Luxury Hospitality</div>
+      <div class="sector-example">Radisson Blu · Kempinski · 5-Star Brand Standards</div>
+    </div>
+    <div class="sector-card">
+      <span class="sector-icon">🏥</span>
+      <div class="sector-name serif">Healthcare</div>
+      <div class="sector-example">King Salman Hospital · LEED-Certified · 350-Bed</div>
+    </div>
+    <div class="sector-card">
+      <span class="sector-icon">🏗️</span>
+      <div class="sector-name serif">High-Rise Residential</div>
+      <div class="sector-example">88 Nairobi · AFI SILVER · Neva Towers</div>
+    </div>
+    <div class="sector-card">
+      <span class="sector-icon">🏢</span>
+      <div class="sector-name serif">Premium Commercial</div>
+      <div class="sector-example">W-AFI · Qatar Airways · Turkish Airlines</div>
+    </div>
+    <div class="sector-card">
+      <span class="sector-icon">🏅</span>
+      <div class="sector-name serif">Olympic Infrastructure</div>
+      <div class="sector-example">Sochi 2014 · 203,000 m² · 330+ Personnel</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr;max-width:240px;margin:24px auto 0;gap:16px;">
+    <div class="sector-card">
+      <span class="sector-icon">🏙️</span>
+      <div class="sector-name serif">Mixed-Use Development</div>
+      <div class="sector-example">Multifunctional complexes · Cross-sector integration</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     11. FOOTER
+     ══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-name serif">Omer Gunay</div>
+    <div class="footer-tagline">Build with clarity. Lead with discipline. Deliver with excellence.</div>
+    <div class="footer-divider"></div>
+    <div class="footer-visa">Dubai-Based · UAE Work Visa · Available Immediately</div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-contact">
+      <a href="mailto:omergunay2002@yahoo.com">omergunay2002@yahoo.com</a><br>
+      +971 52 279 1453<br>
+      Dubai Hills Estate, UAE<br>
+      <a href="https://www.linkedin.com/in/omer-gunay-a692b1a3/" target="_blank">linkedin.com/in/omer-gunay-a692b1a3</a>
+    </div>
+    <div class="footer-copy">© 2026 Omer Gunay. Executive Portfolio.</div>
+  </div>
+</footer>
+
+</body>
+</html>
